@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Arrow funtions quiz</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="./files/screen.css">
+    <link rel="stylesheet" type="text/css" href="./files/custom.css">
+
+    <meta name="description" content="Play with the switch - by cybercafe.dev">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <meta property="article:tag" content="javascript">
+    <meta property="article:tag" content="arrow-functions">
+    <meta property="article:tag" content="functions">
+
+    <meta property="article:publisher" content="https://cybercafe.dev/z00md">
+    <meta property="article:author" content="https://cybercafe.dev/z00md">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+    <script>
+        console.time()
+    </script>
+    <link rel="stylesheet" href="./files/font-awesome.min.css">
+    <script>
+        // To prevent Flash of default theme, add class to html before any rendering
+        var currentTheme = window.localStorage.getItem("theme");
+        if (currentTheme == "dark") {
+            document.getElementsByTagName("html")[0].classList.add("dark")
+        }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171076695-2"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', '252030307');
+    </script>
+
+    <meta name="theme-color" content="#313b3f">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
+
+</head>
+
+<body class="post-template tag-css tag-fouc tag-fods line-numbers">
+
+    <div class="site-wrapper">
+        <!-- <span class="theme-toggle" href="#" title="Theme" data-theme="dark"><svg class="icon icon-bulb" version="1.1"
+                id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+                <g class="center">
+                    <circle class="toggle-inner" cx="12" cy="12" r="2"></circle>
+                </g>
+                <g>
+
+                    <circle class="toggle-outer" cx="12" cy="12" r="5"></circle>
+                </g>
+            </svg></span> -->
+
+
+        <header class="site-header">
+            <div class="site-nav-main">
+                <div class="inner">
+                    <nav class="site-nav">
+                        <div class="site-nav-left-wrapper">
+                            <div class="site-nav-left">
+                                <a class="site-nav-logo" href="https://cybr.cafe">cybr.cafe</a>
+                                <div class="site-nav-content">
+                                    <ul class="nav">
+                                        <!-- <li class="nav-javascript"><a
+                                                href="https://switchover.net/tag/javascript/">Javascript</a></li>
+                                        <li class="nav-gaming"><a href="https://switchover.net/tag/gaming/">Gaming</a>
+                                        </li>
+                                        <li class="nav-web"><a href="https://switchover.net/tag/web/">Web</a></li>
+                                        <li class="nav-tags"><a href="https://switchover.net/tags/">Tags</a></li>
+                                        <li class="nav-author"><a href="https://switchover.net/z00md/">Author</a></li> -->
+                                    </ul>
+
+                                    <span class="nav-post-title dash">Play with the switch</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="site-nav-right">
+                            <ul class="nav">
+                                <li class="nav-twitter"><a href="https://twitter.com/z00md">Twitter</a></li>
+                                <li class="nav-linkedin"><a href="https://www.linkedin.com/in/z00md/">Linkedin</a></li>
+                            </ul>
+
+
+                        </div>
+                    </nav>
+                </div>
+                <div class="progress" style="width: 0%;"></div>
+            </div>
+        </header>
+
+        <div id="medium-zoom-container"></div>
+        <main id="site-main" class="site-main outer">
+            <div class="inner">
+
+                <article class="post-full post tag-css tag-fouc tag-fods ">
+
+                    <header class="post-full-header">
+
+                        <!-- <h1 class="post-full-title">Click it!</h1> -->
+
+                    </header>
+
+
+                    <!-- <div id="hyvor-talk-view" style="max-width: 100%;">
+                    </div>
+                    <script type="text/javascript">
+                        var HYVOR_TALK_WEBSITE = 1130; // DO NOT CHANGE THIS
+                        var HYVOR_TALK_CONFIG = {
+                            url: "https://switchover.net/",
+                            id: "ghost-5f7d5c0e49685b33d5ffe5a3"
+                        };
+                    </script>
+                    <script async="" type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script> -->
+
+                <!-- Put content here -->
+                <ol>
+                  {{#each questions}}
+                    <li>
+                      <div >
+                        <hr>
+                        <pre><code class="language-js">{{this.question-text}}</code></pre>
+                        <section class="options">
+                          {{#each this.options}}
+                            <label for={{../this.id}}-{{this.id}} class="option">   
+                              <input type="radio" name={{../this.id}} id={{../this.id}}-{{this.id}} value={{this.id}} />
+                              {{this.text}}
+                            </label>
+                          {{/each}}
+                        </section>
+                      </div>
+                    </li>
+                  {{/each}}
+                </ol>
+
+
+                </article>
+
+            </div>
+        </main>
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://cybr.cafe/">cybr.cafe</a> © 2020</section>
+                <nav class="site-footer-nav">
+                    <a href="https://cybercafe.dev/playing-with-arrow-functions/">Back to article</a>
+                    <a href="https://www.facebook.com/z00md" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/z00md" target="_blank" rel="noopener">Twitter</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    <script src="./files/casper.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#switch").on("click" , function(e){
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+                if (e.target.checked) {
+                    $("body").addClass("lava");
+                } else {
+                    $("body").removeClass("lava");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        console.log("Time taken to load this page");
+        console.timeEnd();
+        console.log("Is it fast?");
+    </script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-javascript.min.js"></script>
+
+
+
+</body>
+
+</html>

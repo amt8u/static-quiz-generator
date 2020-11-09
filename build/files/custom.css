@@ -1,0 +1,17 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option:hover {
+  background: #131519;
+}
+
+.option {
+  flex-basis: 46%;
+  padding: 10px;
+  border: 1px solid #282822;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+}

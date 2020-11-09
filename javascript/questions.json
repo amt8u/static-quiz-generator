@@ -3,16 +3,45 @@
   "questions": [
     {
       "id": "question-1",
-      "question-text": "What is the correct option?",
+      "question-text": "(_ => _)(99)",
       "answer" : 3,
       "options": [
         {
           "id": "option-1",
-          "text": "\\a\\b\\c\\d"
+          "text": "99"
         },
         {
           "id": "option-2",
-          "text": "Wrong"
+          "text": "error"
+        },
+        {
+          "id": "option-3",
+          "text": "null"
+        },        {
+          "id": "option-4",
+          "text": "undefined"
+        }
+      ]
+    },
+    {
+      "id": "question-2",
+      "question-text": "((x=>{})(),(x=>x=>x)())(()=>true)(false)",
+      "answer" : 3,
+      "options": [
+        {
+          "id": "option-1",
+          "text": "false"
+        },
+        {
+          "id": "option-2",
+          "text": "true"
+        },
+        {
+          "id": "option-3",
+          "text": "0"
+        },        {
+          "id": "option-4",
+          "text": "1"
         }
       ]
     }

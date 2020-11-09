@@ -132,66 +132,54 @@
 
                 <!-- Put content here -->
                 <ol>
-                  <li>
-                    <div >
-                      <hr>
-                      <pre><code class="language-js">((x=&gt;{})(),(x=&gt;x=&gt;x)())(()=&gt;true)(false)
-                      </code></pre>
-                    
-                      <section class="options">
-                        <label for="ques-1-option-1" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-1" value="a" />
-                          Error
-                        </label>
-                        
-                        <label for="ques-1-option-2" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-2" value="b" />
-                          Success
-                        </label>
-
-                        <label for="ques-1-option-3" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-3" value="c" />
-                          undefined
-                        </label>
-
-                        <label for="ques-1-option-4" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-4" value="d" />
-                          99
-                        </label>
-
-                      </section>
-                    </div>
-                  </li>
-                  <li>
-                    <div >
-                      <hr>
-                      <pre><code class="language-js">((x=&gt;{})(),(x=&gt;x=&gt;x)())(()=&gt;true)(false)
-                      </code></pre>
-                    
-                      <section class="options">
-                        <label for="ques-1-option-1" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-1" value="a" />
-                          Error
-                        </label>
-                        
-                        <label for="ques-1-option-2" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-2" value="b" />
-                          Success
-                        </label>
-
-                        <label for="ques-1-option-3" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-3" value="c" />
-                          undefined
-                        </label>
-
-                        <label for="ques-1-option-4" class="option">   
-                          <input type="radio" name="ques-1" id="ques-1-option-4" value="d" />
-                          99
-                        </label>
-
-                      </section>
-                    </div>
-                  </li>
+                    <li>
+                      <div >
+                        <hr>
+                        <pre><code class="language-js">(_ &#x3D;&gt; _)(99)</code></pre>
+                        <section class="options">
+                            <label for=question-1-option-1 class="option">   
+                              <input type="radio" name=question-1 id=question-1-option-1 value=option-1 />
+                              99
+                            </label>
+                            <label for=question-1-option-2 class="option">   
+                              <input type="radio" name=question-1 id=question-1-option-2 value=option-2 />
+                              error
+                            </label>
+                            <label for=question-1-option-3 class="option">   
+                              <input type="radio" name=question-1 id=question-1-option-3 value=option-3 />
+                              null
+                            </label>
+                            <label for=question-1-option-4 class="option">   
+                              <input type="radio" name=question-1 id=question-1-option-4 value=option-4 />
+                              undefined
+                            </label>
+                        </section>
+                      </div>
+                    </li>
+                    <li>
+                      <div >
+                        <hr>
+                        <pre><code class="language-js">((x&#x3D;&gt;{})(),(x&#x3D;&gt;x&#x3D;&gt;x)())(()&#x3D;&gt;true)(false)</code></pre>
+                        <section class="options">
+                            <label for=question-2-option-1 class="option">   
+                              <input type="radio" name=question-2 id=question-2-option-1 value=option-1 />
+                              false
+                            </label>
+                            <label for=question-2-option-2 class="option">   
+                              <input type="radio" name=question-2 id=question-2-option-2 value=option-2 />
+                              true
+                            </label>
+                            <label for=question-2-option-3 class="option">   
+                              <input type="radio" name=question-2 id=question-2-option-3 value=option-3 />
+                              0
+                            </label>
+                            <label for=question-2-option-4 class="option">   
+                              <input type="radio" name=question-2 id=question-2-option-4 value=option-4 />
+                              1
+                            </label>
+                        </section>
+                      </div>
+                    </li>
                 </ol>
 
 
@@ -219,38 +207,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
         </script>
     <script src="./files/casper.js"></script>
-
-    <script>
-        // Parse the URL parameter
-        function getParameterByName(name, url) {
-            if (!url) url = window.location.href;
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-                results = regex.exec(url);
-            if (!results) return null;
-            if (!results[2]) return '';
-            return decodeURIComponent(results[2].replace(/\+/g, " "));
-        }
-
-        // Give the parameter a variable name
-        var action = getParameterByName('action');
-
-        $(document).ready(function () {
-            if (action == 'subscribe') {
-                $('body').addClass("subscribe-success");
-            }
-
-            $('.subscribe-success-message .subscribe-close').click(function () {
-                $('.subscribe-success-message').addClass('close');
-            });
-
-            // Reset form on opening subscrion overlay
-            $('.subscribe-button').click(function () {
-                $('.subscribe-overlay form').removeClass();
-                $('.subscribe-email').val('');
-            });
-        });
-    </script>
 
     <script>
         $(document).ready(function () {
