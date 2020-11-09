@@ -1,0 +1,9 @@
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  flex-basis: 100%;
+  padding: 10px;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "Static Quiz generator with json questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z00md/quiz.git"
+  },
+  "keywords": [
+    "StaticQuiz"
+  ],
+  "author": "z00md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/z00md/quiz/issues"
+  },
+  "homepage": "https://github.com/z00md/quiz#readme",
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  }
+}

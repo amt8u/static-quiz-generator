@@ -1,0 +1,20 @@
+{
+  "name": "Arrow functions",
+  "questions": [
+    {
+      "id": "question-1",
+      "question-text": "What is the correct option?",
+      "answer" : 3,
+      "options": [
+        {
+          "id": "option-1",
+          "text": "\\a\\b\\c\\d"
+        },
+        {
+          "id": "option-2",
+          "text": "Wrong"
+        }
+      ]
+    }
+  ]
+}
