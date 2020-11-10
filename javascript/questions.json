@@ -1,48 +1,187 @@
 {
   "name": "Arrow functions",
+  "description": "Arrow functions added in ES6 provide a good replacement for function expressions. But do you understand them completely? This is a small test to check it out.",
+  "articleURL": "https://cybercafe.dev/playing-with-arrow-functions",
+  "author": "Related article",
+  "authorURL": "https://cybercafe.dev/z00md",
   "questions": [
     {
       "id": "question-1",
       "question-text": "(_ => _)(99)",
-      "answer" : 3,
+      "answer": 0,
       "options": [
-        {
-          "id": "option-1",
-          "text": "99"
-        },
-        {
-          "id": "option-2",
-          "text": "error"
-        },
-        {
-          "id": "option-3",
-          "text": "null"
-        },        {
-          "id": "option-4",
-          "text": "undefined"
-        }
+        "99",
+        "error",
+        "null",
+        "undefined"
       ]
     },
     {
       "id": "question-2",
       "question-text": "((x=>{})(),(x=>x=>x)())(()=>true)(false)",
-      "answer" : 3,
+      "answer": 1,
       "options": [
-        {
-          "id": "option-1",
-          "text": "false"
-        },
-        {
-          "id": "option-2",
-          "text": "true"
-        },
-        {
-          "id": "option-3",
-          "text": "0"
-        },        {
-          "id": "option-4",
-          "text": "1"
-        }
+        "false", "true", "0", "1"
+      ]
+    },
+    {
+      "id": "question-3",
+      "question-text": "null => null",
+      "answer": 0,
+      "options": [
+        "Error", "null", "null => null", "null => undefined"
+      ]
+    },
+    {
+      "id": "question-4",
+      "question-text": "null, undefined => null",
+      "answer": 3,
+      "options": [
+        "Error", "undefined", "null", "undefined => null"
+      ]
+    },
+    {
+      "id": "question-5",
+      "question-text": "(({})({}))",
+      "answer": 0,
+      "options": [
+        "Error", "{}", "null", "undefined"
+      ]
+    },
+    {
+      "id": "question-6",
+      "question-text": "(() => {x:1})()",
+      "answer": 3,
+      "options": [
+        "Error", "{x:1}", "null", "undefined"
+      ]
+    },
+    {
+      "id": "question-7",
+      "question-text": "(() => ({x:1}))()",
+      "answer": 1,
+      "options": [
+        "Error", "{x:1}", "null", "undefined"
+      ]
+    },
+    {
+      "id": "question-8",
+      "question-text": "(() => arguments)(99)",
+      "answer": 0,
+      "options": [
+        "Error", "99", "arguments", "undefined"
+      ]
+    },
+    {
+      "id": "question-9",
+      "question-text": "((x,y,z) => (1,2,3))(4,5,6)",
+      "answer": 2,
+      "options": [
+        "Error", "6", "3", "1,2,3"
+      ]
+    },
+    {
+      "id": "question-10",
+      "question-text": "() => () => () => {}",
+      "answer": 1,
+      "options": [
+        "Error", "() => () => () => {}", "() => {}", "undefined"
+      ]
+    },
+    {
+      "id": "question-11",
+      "question-text": "() => {} == () => {}",
+      "answer": 0,
+      "options": [
+        "Error", "() => {} == () => {}", "{}", "undefined"
+      ]
+    },
+    {
+      "id": "question-12",
+      "question-text": "(() => { return this;})()",
+      "answer": 2,
+      "options": [
+        "Error", "this", "window", "undefined"
+      ]
+    },
+    {
+      "id": "question-13",
+      "question-text": "() => ()",
+      "answer": 0,
+      "options": [
+        "Error", "() => ()", "function() {}", "fn"
+      ]
+    },
+    {
+      "id": "question-14",
+      "question-text": "(() => {return})()",
+      "answer": 3,
+      "options": [
+        "Error", "0", "\"\"", "undefined"
+      ]
+    },
+    {
+      "id": "question-15",
+      "question-text": "x => false()",
+      "answer": 1,
+      "options": [
+        "Error", "x => false()", "false", "0"
+      ]
+    },
+    {
+      "id": "question-16",
+      "question-text": "(() => [()=>(1)])()[0]()",
+      "answer": 2,
+      "options": [
+        "Error", "0", "1", "()=>(1)"
+      ]
+    },
+    {
+      "id": "question-17",
+      "question-text": "(let => let)('Really?')",
+      "answer": 1,
+      "options": [
+        "Error", "Really?", "undefined", "false"
+      ]
+    },
+    {
+      "id": "question-18",
+      "question-text": "(const => const)('Really again?')",
+      "answer": 0,
+      "options": [
+        "Error", "Really again?", "undefined", "false"
+      ]
+    },
+    {
+      "id": "question-19",
+      "question-text": "var y = (var) => {var}",
+      "answer": 0,
+      "options": [
+        "Error", "undefined", "null", "false"
+      ]
+    },
+    {
+      "id": "question-20",
+      "question-text": "`${() => 3}`",
+      "answer": 1,
+      "options": [
+        "Error", "() => 3", "3", "undefined"
+      ]
+    },
+    {
+      "id": "question-21",
+      "question-text": "(() => Function()())()",
+      "answer": 1,
+      "options": [
+        "Error", "undefined", "null", "()"
+      ]
+    },
+    {
+      "id": "question-22",
+      "question-text": "typeof ()=>{}",
+      "answer": 0,
+      "options": [
+        "Error", "function", "string", "undefined"
       ]
     }
   ]

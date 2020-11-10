@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./files/screen.css">
     <link rel="stylesheet" type="text/css" href="./files/custom.css">
 
-    <meta name="description" content="Play with the switch - by cybercafe.dev">
+    <meta name="description" content="Arrow functions added in ES6 provide a good replacement for function expressions. But do you understand them completely? This is a small test to check it out.">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
     <meta property="article:tag" content="javascript">
@@ -39,14 +39,13 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171076695-2"></script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NYPBH1J7E"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        gtag('config', '252030307');
+      gtag('config', 'G-1NYPBH1J7E');
     </script>
 
     <meta name="theme-color" content="#313b3f">
@@ -58,16 +57,17 @@
 <body class="post-template tag-css tag-fouc tag-fods line-numbers">
 
     <div class="site-wrapper">
-        <!-- <span class="theme-toggle" href="#" title="Theme" data-theme="dark"><svg class="icon icon-bulb" version="1.1"
-                id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
-                <g class="center">
-                    <circle class="toggle-inner" cx="12" cy="12" r="2"></circle>
-                </g>
-                <g>
-
-                    <circle class="toggle-outer" cx="12" cy="12" r="5"></circle>
-                </g>
-            </svg></span> -->
+        <span class="theme-toggle" href="#" title="Theme" data-theme="dark">
+          <svg class="icon icon-bulb" version="1.1"
+            id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+            <g class="center">
+                <circle class="toggle-inner" cx="12" cy="12" r="2"></circle>
+            </g>
+            <g>
+                <circle class="toggle-outer" cx="12" cy="12" r="5"></circle>
+            </g>
+          </svg>
+        </span>
 
 
         <header class="site-header">
@@ -114,9 +114,26 @@
 
                     <header class="post-full-header">
 
-                        <!-- <h1 class="post-full-title">Click it!</h1> -->
+                          <h1 class="post-full-title">Arrow functions</h1>
 
-                    </header>
+                          <p class="post-full-custom-excerpt">Arrow functions added in ES6 provide a good replacement for function expressions. But do you understand them completely? This is a small test to check it out.</p>
+
+                          <div class="post-full-byline">
+
+                              <section class="post-full-byline-content">
+
+                                  <section class="post-full-byline-meta">
+                                      <h4 class="author-name"><a href="https://cybercafe.dev/playing-with-arrow-functions">Related article</a></h4>
+                                      <div class="byline-meta-content">
+                                          <time class="byline-meta-date" datetime="2020-11-09">Total questions</time>
+                                          <span class="byline-reading-time"><span class="bull">•</span> 22</span>
+                                      </div>
+                                  </section>
+
+                              </section>
+
+                          </div>
+                      </header>
 
 
                     <!-- <div id="hyvor-talk-view" style="max-width: 100%;">
@@ -130,57 +147,705 @@
                     </script>
                     <script async="" type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script> -->
 
-                <!-- Put content here -->
-                <ol>
-                    <li>
-                      <div >
-                        <hr>
+                <!-- Options-->
+                <ol id="questions">
+                    <li data-question-index=0 data-question=question-1 data-answer=0>
+                      <div>
                         <pre><code class="language-js">(_ &#x3D;&gt; _)(99)</code></pre>
                         <section class="options">
-                            <label for=question-1-option-1 class="option">   
-                              <input type="radio" name=question-1 id=question-1-option-1 value=option-1 />
+                          <div class="option-wrapper">
+                            <label for=question-1-0 class="option">   
+                              <input type="radio" name=question-1 id=question-1-0 value=0 />
                               99
                             </label>
-                            <label for=question-1-option-2 class="option">   
-                              <input type="radio" name=question-1 id=question-1-option-2 value=option-2 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-1-1 class="option">   
+                              <input type="radio" name=question-1 id=question-1-1 value=1 />
                               error
                             </label>
-                            <label for=question-1-option-3 class="option">   
-                              <input type="radio" name=question-1 id=question-1-option-3 value=option-3 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-1-2 class="option">   
+                              <input type="radio" name=question-1 id=question-1-2 value=2 />
                               null
                             </label>
-                            <label for=question-1-option-4 class="option">   
-                              <input type="radio" name=question-1 id=question-1-option-4 value=option-4 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-1-3 class="option">   
+                              <input type="radio" name=question-1 id=question-1-3 value=3 />
                               undefined
                             </label>
+                          </div>
                         </section>
                       </div>
                     </li>
-                    <li>
-                      <div >
-                        <hr>
+                    <li data-question-index=1 data-question=question-2 data-answer=1>
+                      <div>
                         <pre><code class="language-js">((x&#x3D;&gt;{})(),(x&#x3D;&gt;x&#x3D;&gt;x)())(()&#x3D;&gt;true)(false)</code></pre>
                         <section class="options">
-                            <label for=question-2-option-1 class="option">   
-                              <input type="radio" name=question-2 id=question-2-option-1 value=option-1 />
+                          <div class="option-wrapper">
+                            <label for=question-2-0 class="option">   
+                              <input type="radio" name=question-2 id=question-2-0 value=0 />
                               false
                             </label>
-                            <label for=question-2-option-2 class="option">   
-                              <input type="radio" name=question-2 id=question-2-option-2 value=option-2 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-2-1 class="option">   
+                              <input type="radio" name=question-2 id=question-2-1 value=1 />
                               true
                             </label>
-                            <label for=question-2-option-3 class="option">   
-                              <input type="radio" name=question-2 id=question-2-option-3 value=option-3 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-2-2 class="option">   
+                              <input type="radio" name=question-2 id=question-2-2 value=2 />
                               0
                             </label>
-                            <label for=question-2-option-4 class="option">   
-                              <input type="radio" name=question-2 id=question-2-option-4 value=option-4 />
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-2-3 class="option">   
+                              <input type="radio" name=question-2 id=question-2-3 value=3 />
                               1
                             </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=2 data-question=question-3 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">null &#x3D;&gt; null</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-3-0 class="option">   
+                              <input type="radio" name=question-3 id=question-3-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-3-1 class="option">   
+                              <input type="radio" name=question-3 id=question-3-1 value=1 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-3-2 class="option">   
+                              <input type="radio" name=question-3 id=question-3-2 value=2 />
+                              null &#x3D;&gt; null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-3-3 class="option">   
+                              <input type="radio" name=question-3 id=question-3-3 value=3 />
+                              null &#x3D;&gt; undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=3 data-question=question-4 data-answer=3>
+                      <div>
+                        <pre><code class="language-js">null, undefined &#x3D;&gt; null</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-4-0 class="option">   
+                              <input type="radio" name=question-4 id=question-4-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-4-1 class="option">   
+                              <input type="radio" name=question-4 id=question-4-1 value=1 />
+                              undefined
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-4-2 class="option">   
+                              <input type="radio" name=question-4 id=question-4-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-4-3 class="option">   
+                              <input type="radio" name=question-4 id=question-4-3 value=3 />
+                              undefined &#x3D;&gt; null
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=4 data-question=question-5 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">(({})({}))</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-5-0 class="option">   
+                              <input type="radio" name=question-5 id=question-5-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-5-1 class="option">   
+                              <input type="radio" name=question-5 id=question-5-1 value=1 />
+                              {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-5-2 class="option">   
+                              <input type="radio" name=question-5 id=question-5-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-5-3 class="option">   
+                              <input type="radio" name=question-5 id=question-5-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=5 data-question=question-6 data-answer=3>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; {x:1})()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-6-0 class="option">   
+                              <input type="radio" name=question-6 id=question-6-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-6-1 class="option">   
+                              <input type="radio" name=question-6 id=question-6-1 value=1 />
+                              {x:1}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-6-2 class="option">   
+                              <input type="radio" name=question-6 id=question-6-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-6-3 class="option">   
+                              <input type="radio" name=question-6 id=question-6-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=6 data-question=question-7 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; ({x:1}))()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-7-0 class="option">   
+                              <input type="radio" name=question-7 id=question-7-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-7-1 class="option">   
+                              <input type="radio" name=question-7 id=question-7-1 value=1 />
+                              {x:1}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-7-2 class="option">   
+                              <input type="radio" name=question-7 id=question-7-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-7-3 class="option">   
+                              <input type="radio" name=question-7 id=question-7-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=7 data-question=question-8 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; arguments)(99)</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-8-0 class="option">   
+                              <input type="radio" name=question-8 id=question-8-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-8-1 class="option">   
+                              <input type="radio" name=question-8 id=question-8-1 value=1 />
+                              99
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-8-2 class="option">   
+                              <input type="radio" name=question-8 id=question-8-2 value=2 />
+                              arguments
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-8-3 class="option">   
+                              <input type="radio" name=question-8 id=question-8-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=8 data-question=question-9 data-answer=2>
+                      <div>
+                        <pre><code class="language-js">((x,y,z) &#x3D;&gt; (1,2,3))(4,5,6)</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-9-0 class="option">   
+                              <input type="radio" name=question-9 id=question-9-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-9-1 class="option">   
+                              <input type="radio" name=question-9 id=question-9-1 value=1 />
+                              6
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-9-2 class="option">   
+                              <input type="radio" name=question-9 id=question-9-2 value=2 />
+                              3
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-9-3 class="option">   
+                              <input type="radio" name=question-9 id=question-9-3 value=3 />
+                              1,2,3
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=9 data-question=question-10 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">() &#x3D;&gt; () &#x3D;&gt; () &#x3D;&gt; {}</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-10-0 class="option">   
+                              <input type="radio" name=question-10 id=question-10-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-10-1 class="option">   
+                              <input type="radio" name=question-10 id=question-10-1 value=1 />
+                              () &#x3D;&gt; () &#x3D;&gt; () &#x3D;&gt; {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-10-2 class="option">   
+                              <input type="radio" name=question-10 id=question-10-2 value=2 />
+                              () &#x3D;&gt; {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-10-3 class="option">   
+                              <input type="radio" name=question-10 id=question-10-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=10 data-question=question-11 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">() &#x3D;&gt; {} &#x3D;&#x3D; () &#x3D;&gt; {}</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-11-0 class="option">   
+                              <input type="radio" name=question-11 id=question-11-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-11-1 class="option">   
+                              <input type="radio" name=question-11 id=question-11-1 value=1 />
+                              () &#x3D;&gt; {} &#x3D;&#x3D; () &#x3D;&gt; {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-11-2 class="option">   
+                              <input type="radio" name=question-11 id=question-11-2 value=2 />
+                              {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-11-3 class="option">   
+                              <input type="radio" name=question-11 id=question-11-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=11 data-question=question-12 data-answer=2>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; { return this;})()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-12-0 class="option">   
+                              <input type="radio" name=question-12 id=question-12-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-12-1 class="option">   
+                              <input type="radio" name=question-12 id=question-12-1 value=1 />
+                              this
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-12-2 class="option">   
+                              <input type="radio" name=question-12 id=question-12-2 value=2 />
+                              window
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-12-3 class="option">   
+                              <input type="radio" name=question-12 id=question-12-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=12 data-question=question-13 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">() &#x3D;&gt; ()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-13-0 class="option">   
+                              <input type="radio" name=question-13 id=question-13-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-13-1 class="option">   
+                              <input type="radio" name=question-13 id=question-13-1 value=1 />
+                              () &#x3D;&gt; ()
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-13-2 class="option">   
+                              <input type="radio" name=question-13 id=question-13-2 value=2 />
+                              function() {}
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-13-3 class="option">   
+                              <input type="radio" name=question-13 id=question-13-3 value=3 />
+                              fn
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=13 data-question=question-14 data-answer=3>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; {return})()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-14-0 class="option">   
+                              <input type="radio" name=question-14 id=question-14-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-14-1 class="option">   
+                              <input type="radio" name=question-14 id=question-14-1 value=1 />
+                              0
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-14-2 class="option">   
+                              <input type="radio" name=question-14 id=question-14-2 value=2 />
+                              &quot;&quot;
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-14-3 class="option">   
+                              <input type="radio" name=question-14 id=question-14-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=14 data-question=question-15 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">x &#x3D;&gt; false()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-15-0 class="option">   
+                              <input type="radio" name=question-15 id=question-15-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-15-1 class="option">   
+                              <input type="radio" name=question-15 id=question-15-1 value=1 />
+                              x &#x3D;&gt; false()
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-15-2 class="option">   
+                              <input type="radio" name=question-15 id=question-15-2 value=2 />
+                              false
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-15-3 class="option">   
+                              <input type="radio" name=question-15 id=question-15-3 value=3 />
+                              0
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=15 data-question=question-16 data-answer=2>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; [()&#x3D;&gt;(1)])()[0]()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-16-0 class="option">   
+                              <input type="radio" name=question-16 id=question-16-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-16-1 class="option">   
+                              <input type="radio" name=question-16 id=question-16-1 value=1 />
+                              0
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-16-2 class="option">   
+                              <input type="radio" name=question-16 id=question-16-2 value=2 />
+                              1
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-16-3 class="option">   
+                              <input type="radio" name=question-16 id=question-16-3 value=3 />
+                              ()&#x3D;&gt;(1)
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=16 data-question=question-17 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">(let &#x3D;&gt; let)(&#x27;Really?&#x27;)</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-17-0 class="option">   
+                              <input type="radio" name=question-17 id=question-17-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-17-1 class="option">   
+                              <input type="radio" name=question-17 id=question-17-1 value=1 />
+                              Really?
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-17-2 class="option">   
+                              <input type="radio" name=question-17 id=question-17-2 value=2 />
+                              undefined
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-17-3 class="option">   
+                              <input type="radio" name=question-17 id=question-17-3 value=3 />
+                              false
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=17 data-question=question-18 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">(const &#x3D;&gt; const)(&#x27;Really again?&#x27;)</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-18-0 class="option">   
+                              <input type="radio" name=question-18 id=question-18-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-18-1 class="option">   
+                              <input type="radio" name=question-18 id=question-18-1 value=1 />
+                              Really again?
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-18-2 class="option">   
+                              <input type="radio" name=question-18 id=question-18-2 value=2 />
+                              undefined
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-18-3 class="option">   
+                              <input type="radio" name=question-18 id=question-18-3 value=3 />
+                              false
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=18 data-question=question-19 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">var y &#x3D; (var) &#x3D;&gt; {var}</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-19-0 class="option">   
+                              <input type="radio" name=question-19 id=question-19-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-19-1 class="option">   
+                              <input type="radio" name=question-19 id=question-19-1 value=1 />
+                              undefined
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-19-2 class="option">   
+                              <input type="radio" name=question-19 id=question-19-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-19-3 class="option">   
+                              <input type="radio" name=question-19 id=question-19-3 value=3 />
+                              false
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=19 data-question=question-20 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">&#x60;${() &#x3D;&gt; 3}&#x60;</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-20-0 class="option">   
+                              <input type="radio" name=question-20 id=question-20-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-20-1 class="option">   
+                              <input type="radio" name=question-20 id=question-20-1 value=1 />
+                              () &#x3D;&gt; 3
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-20-2 class="option">   
+                              <input type="radio" name=question-20 id=question-20-2 value=2 />
+                              3
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-20-3 class="option">   
+                              <input type="radio" name=question-20 id=question-20-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=20 data-question=question-21 data-answer=1>
+                      <div>
+                        <pre><code class="language-js">(() &#x3D;&gt; Function()())()</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-21-0 class="option">   
+                              <input type="radio" name=question-21 id=question-21-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-21-1 class="option">   
+                              <input type="radio" name=question-21 id=question-21-1 value=1 />
+                              undefined
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-21-2 class="option">   
+                              <input type="radio" name=question-21 id=question-21-2 value=2 />
+                              null
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-21-3 class="option">   
+                              <input type="radio" name=question-21 id=question-21-3 value=3 />
+                              ()
+                            </label>
+                          </div>
+                        </section>
+                      </div>
+                    </li>
+                    <li data-question-index=21 data-question=question-22 data-answer=0>
+                      <div>
+                        <pre><code class="language-js">typeof ()&#x3D;&gt;{}</code></pre>
+                        <section class="options">
+                          <div class="option-wrapper">
+                            <label for=question-22-0 class="option">   
+                              <input type="radio" name=question-22 id=question-22-0 value=0 />
+                              Error
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-22-1 class="option">   
+                              <input type="radio" name=question-22 id=question-22-1 value=1 />
+                              function
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-22-2 class="option">   
+                              <input type="radio" name=question-22 id=question-22-2 value=2 />
+                              string
+                            </label>
+                          </div>
+                          <div class="option-wrapper">
+                            <label for=question-22-3 class="option">   
+                              <input type="radio" name=question-22 id=question-22-3 value=3 />
+                              undefined
+                            </label>
+                          </div>
                         </section>
                       </div>
                     </li>
                 </ol>
+
+                <section class="result-wrapper">
+                  <button id="submit" onclick="calculateScore()">Submit</button>
+                  <hr/>
+                  <div class="result">
+                    <p>Correct answers : <span id="correct-answers"></span></p>
+                    <p>Incorrect answers : <span id="incorrect-answers"></span></p>
+                    <p>Unanswered : <span id="unanswered"></span></p>                    
+                  </div>
+                </section>
+
+                <section>
+                  <p>For all explanations to above question please see the <a href="https://cybercafe.dev/playing-with-arrow-functions">article</a></p>
+                </section>
 
 
                 </article>
@@ -193,7 +858,7 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="https://cybr.cafe/">cybr.cafe</a> © 2020</section>
                 <nav class="site-footer-nav">
-                    <a href="https://cybercafe.dev/playing-with-arrow-functions/">Back to article</a>
+                    <a href="https://cybercafe.dev/">Blog</a>
                     <a href="https://www.facebook.com/z00md" target="_blank" rel="noopener">Facebook</a>
                     <a href="https://twitter.com/z00md" target="_blank" rel="noopener">Twitter</a>
                 </nav>
@@ -232,7 +897,37 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-javascript.min.js"></script>
+    <script>
+      function calculateScore() {
+        var list = document.querySelectorAll("#questions li");
+        var score = {totalQuestions:0, correct:[], incorrect: [], unanswered: []};
+        list.forEach(            
+            item => {
+                score.totalQuestions = score.totalQuestions + 1;
+                var options = document.getElementsByName(item.dataset["question"]);
+                var unanswered = true;
+                var questionNum = Number(item.dataset["questionIndex"]) + 1;
+                options.forEach(opt => {                  
+                    if (opt.checked) {
+                      unanswered = false;
+                        if (opt.value == item.dataset["answer"]) {
+                            score.correct.push(questionNum);
+                        } else {
+                            score.incorrect.push(questionNum);
+                        }
+                    }
+                });
 
+                if (unanswered) {
+                  score.unanswered.push(questionNum);
+                }
+            }
+        );
+        document.getElementById("correct-answers").innerHTML = score.correct.join(",");
+        document.getElementById("incorrect-answers").innerHTML = score.incorrect.join(",");
+        document.getElementById("unanswered").innerHTML = score.unanswered.join(",");
+      }
+    </script>
 
 
 </body>

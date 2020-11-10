@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="./files/screen.css">
     <link rel="stylesheet" type="text/css" href="./files/custom.css">
 
-    <meta name="description" content="Play with the switch - by cybercafe.dev">
+    <meta name="description" content="{{this.description}}">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
     <meta property="article:tag" content="javascript">
@@ -39,14 +39,13 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171076695-2"></script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1NYPBH1J7E"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-        gtag('config', '252030307');
+      gtag('config', 'G-1NYPBH1J7E');
     </script>
 
     <meta name="theme-color" content="#313b3f">
@@ -58,16 +57,17 @@
 <body class="post-template tag-css tag-fouc tag-fods line-numbers">
 
     <div class="site-wrapper">
-        <!-- <span class="theme-toggle" href="#" title="Theme" data-theme="dark"><svg class="icon icon-bulb" version="1.1"
-                id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
-                <g class="center">
-                    <circle class="toggle-inner" cx="12" cy="12" r="2"></circle>
-                </g>
-                <g>
-
-                    <circle class="toggle-outer" cx="12" cy="12" r="5"></circle>
-                </g>
-            </svg></span> -->
+        <span class="theme-toggle" href="#" title="Theme" data-theme="dark">
+          <svg class="icon icon-bulb" version="1.1"
+            id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve">
+            <g class="center">
+                <circle class="toggle-inner" cx="12" cy="12" r="2"></circle>
+            </g>
+            <g>
+                <circle class="toggle-outer" cx="12" cy="12" r="5"></circle>
+            </g>
+          </svg>
+        </span>
 
 
         <header class="site-header">
@@ -114,9 +114,26 @@
 
                     <header class="post-full-header">
 
-                        <!-- <h1 class="post-full-title">Click it!</h1> -->
+                          <h1 class="post-full-title">{{this.name}}</h1>
 
-                    </header>
+                          <p class="post-full-custom-excerpt">{{this.description}}</p>
+
+                          <div class="post-full-byline">
+
+                              <section class="post-full-byline-content">
+
+                                  <section class="post-full-byline-meta">
+                                      <h4 class="author-name"><a href="{{this.articleURL}}">{{this.author}}</a></h4>
+                                      <div class="byline-meta-content">
+                                          <time class="byline-meta-date" datetime="2020-11-09">Total questions</time>
+                                          <span class="byline-reading-time"><span class="bull">•</span> {{this.questions.length}}</span>
+                                      </div>
+                                  </section>
+
+                              </section>
+
+                          </div>
+                      </header>
 
 
                     <!-- <div id="hyvor-talk-view" style="max-width: 100%;">
@@ -130,25 +147,40 @@
                     </script>
                     <script async="" type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script> -->
 
-                <!-- Put content here -->
-                <ol>
+                <!-- Options-->
+                <ol id="questions">
                   {{#each questions}}
-                    <li>
-                      <div >
-                        <hr>
+                    <li data-question-index={{@index}} data-question={{this.id}} data-answer={{this.answer}}>
+                      <div>
                         <pre><code class="language-js">{{this.question-text}}</code></pre>
                         <section class="options">
                           {{#each this.options}}
-                            <label for={{../this.id}}-{{this.id}} class="option">   
-                              <input type="radio" name={{../this.id}} id={{../this.id}}-{{this.id}} value={{this.id}} />
-                              {{this.text}}
+                          <div class="option-wrapper">
+                            <label for={{../this.id}}-{{@index}} class="option">   
+                              <input type="radio" name={{../this.id}} id={{../this.id}}-{{@index}} value={{@index}} />
+                              {{this}}
                             </label>
+                          </div>
                           {{/each}}
                         </section>
                       </div>
                     </li>
                   {{/each}}
                 </ol>
+
+                <section class="result-wrapper">
+                  <button id="submit" onclick="calculateScore()">Submit</button>
+                  <hr/>
+                  <div class="result">
+                    <p>Correct answers : <span id="correct-answers"></span></p>
+                    <p>Incorrect answers : <span id="incorrect-answers"></span></p>
+                    <p>Unanswered : <span id="unanswered"></span></p>                    
+                  </div>
+                </section>
+
+                <section>
+                  <p>For all explanations to above question please see the <a href="{{articleURL}}">article</a></p>
+                </section>
 
 
                 </article>
@@ -161,7 +193,7 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="https://cybr.cafe/">cybr.cafe</a> © 2020</section>
                 <nav class="site-footer-nav">
-                    <a href="https://cybercafe.dev/playing-with-arrow-functions/">Back to article</a>
+                    <a href="https://cybercafe.dev/">Blog</a>
                     <a href="https://www.facebook.com/z00md" target="_blank" rel="noopener">Facebook</a>
                     <a href="https://twitter.com/z00md" target="_blank" rel="noopener">Twitter</a>
                 </nav>
@@ -200,7 +232,37 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-javascript.min.js"></script>
+    <script>
+      function calculateScore() {
+        var list = document.querySelectorAll("#questions li");
+        var score = {totalQuestions:0, correct:[], incorrect: [], unanswered: []};
+        list.forEach(            
+            item => {
+                score.totalQuestions = score.totalQuestions + 1;
+                var options = document.getElementsByName(item.dataset["question"]);
+                var unanswered = true;
+                var questionNum = Number(item.dataset["questionIndex"]) + 1;
+                options.forEach(opt => {                  
+                    if (opt.checked) {
+                      unanswered = false;
+                        if (opt.value == item.dataset["answer"]) {
+                            score.correct.push(questionNum);
+                        } else {
+                            score.incorrect.push(questionNum);
+                        }
+                    }
+                });
 
+                if (unanswered) {
+                  score.unanswered.push(questionNum);
+                }
+            }
+        );
+        document.getElementById("correct-answers").innerHTML = score.correct.join(",");
+        document.getElementById("incorrect-answers").innerHTML = score.incorrect.join(",");
+        document.getElementById("unanswered").innerHTML = score.unanswered.join(",");
+      }
+    </script>
 
 
 </body>
